@@ -1,0 +1,145 @@
+{
+  "description": "深沟球轴承数据",
+  "models": [
+    {
+      "model": "6200",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 10, "D": 30, "B": 9},
+      "load_ratings": {"C": 5070, "C0": 2370},
+      "speed_limits": {"grease": 28000, "oil": 34000},
+      "weight": 0.032,
+      "cross_reference": {"SKF": "6200", "NSK": "6200", "FAG": "6200", "NTN": "6200"}
+    },
+    {
+      "model": "6201",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 12, "D": 32, "B": 10},
+      "load_ratings": {"C": 6800, "C0": 3050},
+      "speed_limits": {"grease": 26000, "oil": 32000},
+      "weight": 0.037,
+      "cross_reference": {"SKF": "6201", "NSK": "6201", "FAG": "6201", "NTN": "6201"}
+    },
+    {
+      "model": "6202",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 15, "D": 35, "B": 11},
+      "load_ratings": {"C": 7800, "C0": 3750},
+      "speed_limits": {"grease": 24000, "oil": 28000},
+      "weight": 0.045,
+      "cross_reference": {"SKF": "6202", "NSK": "6202", "FAG": "6202", "NTN": "6202"}
+    },
+    {
+      "model": "6203",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 17, "D": 40, "B": 12},
+      "load_ratings": {"C": 9550, "C0": 4800},
+      "speed_limits": {"grease": 22000, "oil": 26000},
+      "weight": 0.065,
+      "cross_reference": {"SKF": "6203", "NSK": "6203", "FAG": "6203", "NTN": "6203"}
+    },
+    {
+      "model": "6204",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 20, "D": 47, "B": 14},
+      "load_ratings": {"C": 12700, "C0": 6600},
+      "speed_limits": {"grease": 18000, "oil": 22000},
+      "weight": 0.106,
+      "cross_reference": {"SKF": "6204", "NSK": "6204", "FAG": "6204", "NTN": "6204"}
+    },
+    {
+      "model": "6205",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 25, "D": 52, "B": 15},
+      "load_ratings": {"C": 14000, "C0": 7850},
+      "speed_limits": {"grease": 16000, "oil": 19000},
+      "weight": 0.128,
+      "cross_reference": {"SKF": "6205", "NSK": "6205", "FAG": "6205", "NTN": "6205"}
+    },
+    {
+      "model": "6206",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 30, "D": 62, "B": 16},
+      "load_ratings": {"C": 19500, "C0": 11300},
+      "speed_limits": {"grease": 14000, "oil": 16000},
+      "weight": 0.199,
+      "cross_reference": {"SKF": "6206", "NSK": "6206", "FAG": "6206", "NTN": "6206"}
+    },
+    {
+      "model": "6207",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 35, "D": 72, "B": 17},
+      "load_ratings": {"C": 25500, "C0": 15300},
+      "speed_limits": {"grease": 12000, "oil": 14000},
+      "weight": 0.288,
+      "cross_reference": {"SKF": "6207", "NSK": "6207", "FAG": "6207", "NTN": "6207"}
+    },
+    {
+      "model": "6208",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 40, "D": 80, "B": 18},
+      "load_ratings": {"C": 32000, "C0": 19000},
+      "speed_limits": {"grease": 11000, "oil": 13000},
+      "weight": 0.366,
+      "cross_reference": {"SKF": "6208", "NSK": "6208", "FAG": "6208", "NTN": "6208"}
+    },
+    {
+      "model": "6300",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 10, "D": 35, "B": 11},
+      "load_ratings": {"C": 8100, "C0": 3450},
+      "speed_limits": {"grease": 24000, "oil": 30000},
+      "weight": 0.053,
+      "cross_reference": {"SKF": "6300", "NSK": "6300", "FAG": "6300", "NTN": "6300"}
+    },
+    {
+      "model": "6301",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 12, "D": 37, "B": 12},
+      "load_ratings": {"C": 9700, "C0": 4200},
+      "speed_limits": {"grease": 22000, "oil": 28000},
+      "weight": 0.06,
+      "cross_reference": {"SKF": "6301", "NSK": "6301", "FAG": "6301", "NTN": "6301"}
+    },
+    {
+      "model": "6302",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 15, "D": 42, "B": 13},
+      "load_ratings": {"C": 11400, "C0": 5400},
+      "speed_limits": {"grease": 20000, "oil": 24000},
+      "weight": 0.082,
+      "cross_reference": {"SKF": "6302", "NSK": "6302", "FAG": "6302", "NTN": "6302"}
+    },
+    {
+      "model": "6303",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 17, "D": 47, "B": 14},
+      "load_ratings": {"C": 13500, "C0": 6550},
+      "speed_limits": {"grease": 18000, "oil": 22000},
+      "weight": 0.115,
+      "cross_reference": {"SKF": "6303", "NSK": "6303", "FAG": "6303", "NTN": "6303"}
+    },
+    {
+      "model": "6304",
+      "type": "deep_groove_ball",
+      "type_name": "深沟球轴承",
+      "dimensions": {"d": 20, "D": 52, "B": 15},
+      "load_ratings": {"C": 15900, "C0": 7900},
+      "speed_limits": {"grease": 16000, "oil": 19000},
+      "weight": 0.142,
+      "cross_reference": {"SKF": "6304", "NSK": "6304", "FAG": "6304", "NTN": "6304"}
+    }
+  ]
+}

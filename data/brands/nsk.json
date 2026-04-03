@@ -1,0 +1,70 @@
+{
+  "name": "NSK",
+  "full_name": "Nippon Seiko Kabushiki Kaisha",
+  "country": "日本",
+  "founded": 1916,
+  "website": "https://www.nsk.com",
+  "description": "日本最大轴承制造商，精密加工技术领先，以低噪音、高可靠性著称",
+  "product_lines": [
+    {
+      "series": "6000",
+      "name": "深沟球轴承",
+      "features": ["高精度", "低噪音", "长寿命"],
+      "applications": ["工业电机", "家用电器", "办公设备"]
+    },
+    {
+      "series": "7200",
+      "name": "角接触球轴承",
+      "features": ["高刚性", "高速性能", "低发热"],
+      "applications": ["机床主轴", "涡轮增压器", "真空泵"]
+    },
+    {
+      "series": "NU 200",
+      "name": "圆柱滚子轴承",
+      "features": ["高承载", "EW系列优化设计"],
+      "applications": ["大型电机", "齿轮箱"]
+    },
+    {
+      "series": "BL/GL",
+      "name": "滚珠丝杠",
+      "features": ["高精度定位", "低噪音", "高刚性"],
+      "applications": ["数控机床", "半导体设备", "机器人"]
+    },
+    {
+      "series": "LH/LS",
+      "name": "线性导轨",
+      "features": ["高刚性", "高精度", "低摩擦"],
+      "applications": ["机床", "半导体设备", "自动化"]
+    }
+  ],
+  "specialties": ["精密轴承", "滚珠丝杠", "线性导轨", "汽车轴承", "低噪音技术"],
+  "suffix_system": {
+    "seals": {
+      "Z": "单面防尘盖",
+      "ZZ": "双面防尘盖",
+      "VV": "双面非接触式密封",
+      "DDU": "双面接触式密封",
+      "NR": "带止动环"
+    },
+    "cage": {
+      "J": "钢板冲压保持架",
+      "M": "黄铜实体保持架",
+      "T1X": "尼龙保持架"
+    },
+    "clearance": {
+      "C2": "小游隙",
+      "CM": "电机专用游隙",
+      "C3": "大游隙"
+    },
+    "precision": {
+      "P6": "6级精度",
+      "P5": "5级精度",
+      "P4": "4级精度",
+      "P2": "2级精度"
+    },
+    "design": {
+      "E": "加强型",
+      "EW": "圆柱滚子加强型"
+    }
+  }
+}
