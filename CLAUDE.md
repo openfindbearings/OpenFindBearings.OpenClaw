@@ -4,74 +4,94 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-OpenFindBearings.OpenClaw 是一个轴承型号和品牌搜索的 AI Skill 项目。提供轴承相关的查询、解析和选型支持。
+OpenFindBearings.OpenClaw 是一个轴承型号和品牌搜索的 OpenClaw 插件项目。提供轴承相关的查询、解析和选型支持。
 
 ## Project Structure
 
 ```
 .
-├── skills/                          # AI Skills 目录
-│   └── bearing-search/              # 轴承搜索 Skill
-│       ├── SKILL.md                 # Skill 定义文件
-│       ├── scripts/                 # 工具脚本
-│       │   └── search_model.py      # 型号搜索脚本
-│       └── references/              # 参考文档
-│           ├── data-structure.md    # 数据结构设计
-│           ├── model-codes.md       # 型号编码规则
-│           └── brands.md            # 品牌参考信息
+├── openclaw.plugin.json             # OpenClaw 插件配置文件
+├── src/                             # TypeScript 源代码
+│   ├── index.ts                     # 插件入口，注册 Tools
+│   ├── package.json                 # npm 配置
+│   ├── tsconfig.json                # TypeScript 配置
+│   └── @types/
+│       └── openclaw-plugin-sdk.d.ts # SDK 类型定义
 │
-├── data/                            # 数据文件
-│   ├── models/                      # 轴承型号数据
-│   │   └── deep_groove.json         # 深沟球轴承数据
-│   └── brands/                      # 品牌信息数据
-│       ├── skf.json                 # SKF 品牌信息
-│       └── nsk.json                 # NSK 品牌信息
+├── skills/                          # Claude Code Skills（文档/知识库）
+│   └── bearing-search/
+│       ├── SKILL.md
+│       ├── scripts/search_model.py
+│       └── references/
+│           ├── data-structure.md
+│           ├── model-codes.md
+│           └── brands.md
 │
-├── src/                             # 源代码（待开发）
+├── data/                            # 静态数据
+│   ├── models/deep_groove.json
+│   └── brands/
+│       ├── skf.json
+│       └── nsk.json
+│
 ├── README.md
 ├── LICENSE
-└── CLAUDE.md                        # 本文件
+└── CLAUDE.md
 ```
 
 ## Key Architecture
 
-### Skill 系统
+### OpenClaw 插件系统
 
-项目位于 `skills/bearing-search/`，遵循 Claude Code Skill 规范：
-- `SKILL.md`：Skill 入口文件，包含元数据和功能描述
-- `scripts/`：可执行脚本，用于具体查询任务
-- `references/`：参考资料，按需加载到上下文
+插件基于 OpenClaw SDK，暴露三个主要工具：
 
-### 数据架构
+| Tool | 用途 |
+|------|------|
+| `bearing_search` | 按条件搜索轴承（型号、品牌、尺寸范围） |
+| `bearing_get_by_part` | 按精确型号查询详情 |
+| `bearing_hot` | 获取热门轴承推荐 |
 
-数据与代码分离，存储在 `data/` 目录：
-- `data/models/`：按轴承类型分类的 JSON 数据文件
-- `data/brands/`：各品牌信息 JSON 文件
+数据源：后端 API (https://api.515813.xyz/api/)
 
-数据格式规范见 `skills/bearing-search/references/data-structure.md`
+### Skills（知识库）
+
+`skills/bearing-search/` 包含轴承相关的参考资料：
+- 型号编码规则文档
+- 品牌对照表
+- 本地搜索脚本（离线使用）
 
 ## Common Commands
 
-### 搜索轴承型号
+### 构建插件
+
+```bash
+cd src
+npm install
+npm run build
+```
+
+### 本地型号搜索（离线）
 
 ```bash
 python skills/bearing-search/scripts/search_model.py 6204
-python skills/bearing-search/scripts/search_model.py 6204-2RS
 ```
 
-### 添加新型号数据
+## Tool Parameters
 
-编辑 `data/models/` 下对应的 JSON 文件，遵循现有数据格式。
+### bearing_search
 
-## Development Notes
+- `keyword`: 型号或品牌关键词
+- `partNumber`: 精确型号
+- `min/maxInnerDiameter`: 内径范围 (mm)
+- `min/maxOuterDiameter`: 外径范围 (mm)
+- `min/maxWidth`: 宽度范围 (mm)
+- `brandId`: 品牌 ID
+- `bearingTypeId`: 轴承类型 ID
+- `page`/`pageSize`: 分页
 
-- Skill 设计采用**渐进式披露**原则：SKILL.md 保持精简，详细信息放在 references/
-- 型号数据采用 JSON 格式，便于程序读取和人工编辑
-- 品牌对照表支持多品牌型号转换（SKF ↔ NSK ↔ FAG 等）
+### bearing_get_by_part
 
-## Future Work
+- `partNumber`: 精确型号（如 6205-2RS）
 
-- [ ] 添加更多轴承类型数据（圆柱滚子、圆锥滚子、角接触等）
-- [ ] 开发品牌搜索脚本
-- [ ] 开发型号对照转换工具
-- [ ] 添加选型推荐算法
+### bearing_hot
+
+- `count`: 返回数量

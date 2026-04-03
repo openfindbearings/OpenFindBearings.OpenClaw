@@ -1,0 +1,39 @@
+{
+  "name": "@openfindbearings/openclaw-bearing-plugin",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin for searching bearings by model, brand, and dimensions",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "openclaw.plugin.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "bearing",
+    "search"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickvdp/OpenFindBearings.Mobile",
+    "directory": "src/openclaw-bearing-plugin"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "~5.9.3"
+  },
+  "openclaw": {
+    "extensions": ["./dist/index.js"]
+  }
+}

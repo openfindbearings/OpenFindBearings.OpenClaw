@@ -1,0 +1,16 @@
+{
+  "id": "bearing-search",
+  "name": "Bearing Search",
+  "description": "搜索轴承产品数据库（型号、品牌、尺寸参数）",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiBaseUrl": {
+        "type": "string",
+        "description": "轴承 API 基础地址",
+        "default": "https://api.515813.xyz/api/"
+      }
+    },
+    "additionalProperties": false
+  }
+}
